@@ -11,7 +11,7 @@
      [:h1
       {:class (styles/level1)}
       "Hello from Hanna" @name]
-     #_[:h1 "How are you doing?"]]))
+     [:h1 "How are you doing?"]]))
 
 (defn top-menu [{:keys [router current-route]}]
   [:div 
