@@ -60,9 +60,12 @@
    {:use-fragment true}))
 
 (defn router-component [{:keys [router]}]
-  (let [current-route @(re-frame/subscribe [:current-route])]
-    (println "At the router component " current-route)
+  (let [current-route @(re-frame/subscribe [:current-route])
+        view (case (-> current-route
+                       :data
+                       :name)
+               :home  views/home-panel)]
     [:div.main-container
      [views/top-menu {:router router :current-route current-route}]
      (when current-route
-       [(-> current-route :data :view )])]))
+       [(fn [] view)])]))

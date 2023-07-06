@@ -10,13 +10,14 @@
     [:div
      [:h1
       {:class (styles/level1)}
-      "Hello from " @name]]))
+      "Hello from Hanna" @name]
+     #_[:h1 "How are you doing?"]]))
 
 (defn top-menu [{:keys [router current-route]}]
   [:div 
    [:nav {:class "navbar", :role "navigation", :aria-label "main navigation"}
     [:div {:class "navbar-brand"}
-     [:h1.navbar-item.is-size-5.has-text-weight-bold "ourhaggadah"]
+     [:h1.navbar-item.is-size-5.has-text-weight-bold "My app"]
      [:a.navbar-item.is-size-5.has-text-weight-bold {:on-click  #(re-frame/dispatch [::push-state :home])} "Home"]
      [:a.navbar-item.is-size-5.has-text-weight-bold {:on-click  #(re-frame/dispatch [::push-state :about])} "About"]
      [:a {:role "button", :class "navbar-burger", :aria-label "menu", :aria-expanded "false", :data-target "navbarBasicExample"}
