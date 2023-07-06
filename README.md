@@ -8,5 +8,6 @@ This project is to demonstrate an issue with the hot reload feature. Right now, 
 ## Running the project
 
 * Install shadow-cljs by running `npm install shadow-cljs`
+* Run `npm install`
 * Run `npx shadow-cljs watch app`
 * When the app compiles, go to localhost:8200 
